@@ -1,3 +1,3 @@
-# yelp-camp website having complete CRUD functionality 
+# yelp-camp website using CRUD functionality 
 > Create Read Update Delete Campgrounds
 > Create Read Delete Reviews
