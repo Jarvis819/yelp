@@ -28,7 +28,7 @@ router.get('/logout', function (req, res, next) {
       return next(err);
     }
     req.flash('success', 'Cya!');
-    res.redirect('/campgrounds');
+    res.redirect('/campgrounds/?page=1');
   });
 });
 

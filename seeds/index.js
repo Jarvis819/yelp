@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const cities = require('./cities');
 const { places, descriptors } = require('./helpers');
 const Campground = require('../models/campground');
-const dbUrl = process.env.DB_URL;
-// 'mongodb://127.0.0.1:27017/yelp-camp';
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp';
+//
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

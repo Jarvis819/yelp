@@ -30,22 +30,9 @@
     </div>
   </div>
 </div>
-<% } %>
-<div class="pagination">
-  <% if ( currentPage != 1) {%>
-  <a href="/campgrounds/?page=1">1</a>
-  <% } %>
-
-  <a href="/campgrounds/?page=<%=currentPage %>" class="active"
-    ><%=currentPage %></a
-  >
-
-  <% if ( hasNextPage) {%>
-  <a href="/campgrounds/?page=<%=nextPage %>"><%=nextPage %></a>
-  <% } %> <% if ( lastPage != currentPage && nextPage != lastPage) {%>
-  <a href="/campgrounds/?page=<%=lastPage %>"><%=lastPage %></a>
-  <% } %>
-</div>
+<% } %> <%- include('../partials/pagination.ejs', {currentPage: currentPage,
+nextPage: nextPage, previousPage: previousPage, lastPage: lastPage, hasNextPage:
+hasNextPage, hasPreviousPage: hasPreviousPage}) %>
 <script>
   const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
   const campgrounds = {features:<%-JSON.stringify(campgrounds)%>}
